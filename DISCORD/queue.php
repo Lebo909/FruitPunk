@@ -28,8 +28,29 @@
 	}
 	
   </style>
-</head>
 
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- YouTube API -->
+  <script src= "https://apis.google.com/js/client.js"></script>
+
+  
+  <!-- Animations -->
+  <link rel="stylesheet" href="css/animate.css">
+  <script src="js/wow.min.js"></script>
+  <script> new WOW().init(); </script>
+
+</head>
+<body>
               <!-- Grid row -->
               <div class="row">
 
@@ -46,7 +67,7 @@
 						  <h3 class="card-title text-center" style="color:#00d277;">Queue</h3>
 						  <hr class="grey darken-4 mb-5">
 						
-							<ul id="simpleList" class="list-group">
+							<ol class="example">
 
 								<?php
 										
@@ -105,7 +126,7 @@
 								$vcount+1;
 								
 						?>
-							</ul>			
+							</ol>			
 							<br>
 						
 					
@@ -121,56 +142,23 @@
               </div>
               <!-- Grid row -->
 
-  <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- SortableJS -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
-  <!-- YouTube API -->
-  <script src= "https://apis.google.com/js/client.js"></script>
-  
-  <!-- Animations -->
-  <link rel="stylesheet" href="css/animate.css">
-  <script src="js/wow.min.js"></script>
-  <script> new WOW().init(); </script>
-  
-  <script>
+	<script>
+	    $(document).ready(function() {
+	        $("ol.example").sortable({
+	            update:function(event, ui){
+	                alert("in the update");
+					var mydata = $(this).sortable('serialize');
 
-  </script>
-  
-  <script>
-	Sortable.create(simpleList, { 
-			animation: 150
-		});
-	
-	var sortableLinks = $("#category_links_list_3");
-	$(sortableLinks).sortable();
-	var linkOrderData = $(sortableLinks).sortable('serialize');
-	
-	$('#element').sortable({
-		axis: 'y',
-		update: function (event, ui) {
-			var data = $(this).sortable('serialize');
+					// POST to server using $.post or $.ajax
+					$.ajax({
+						data: mydata,
+						type: 'POST',
+						url: 'http://localhost:5000/'
+					});
+	            }
+	        });
+	    });
+	</script>
 
-			// POST to server using $.post or $.ajax
-			$.ajax({
-				data: data,
-				type: 'POST',
-				url: 'localhost:5000'
-			});
-		}
-	});
-  </script>
-
-  <script>
-
-  </script>
-  
-  
+</body>
 </html>

@@ -1,9 +1,9 @@
 <?php
 
 $servername = "localhost";
-$username = "root";
-$password = "mysql";
-$dbname = "sandbox";
+$username = "host";
+$password = "hostpass123";
+$dbname = "music_player";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
