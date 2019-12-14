@@ -7,14 +7,15 @@ $dbname = "sandbox";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-$status=0;
+$thestatus=0;
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-		
-	$apikey = "AIzaSyDcjT6xKACqYU1rEL0MiaI3mgZRBjvBGIk";
+
+
+/*	
 
 	if(isset($_POST['search']))
 	{
@@ -27,7 +28,7 @@ if ($conn->connect_error) {
 
 			#INSERT into song_queue
 			$stmt = $conn->prepare("INSERT INTO song_queue (url,status) VALUES (?,?);");
-			$stmt->bind_param("ss", $url, $status);
+			$stmt->bind_param("ss", $url, $thestatus);
 			$stmt->execute();
 
 		}
@@ -38,20 +39,23 @@ if ($conn->connect_error) {
 		
 			#INSERT into song_queue
 			$stmt = $conn->prepare("INSERT INTO song_queue (url, status) VALUES (?,?);");
-			$stmt->bind_param("ss", $url, $status);
+			$stmt->bind_param("ss", $url, $thestatus);
 			$stmt->execute();
 		}							
 		else
 		{
 			#nothing happens
 		}
+
+	
 		
 	#$check1 = "the video Id : " . $vidid . "<br>";
 	#$check2 = "regular url : " . $url . "<br>";
 	#$check3 = 'valid youtube url';	
 	header("Location: " . $_SERVER['REQUEST_URI']);
 	exit();
-	} 	
+	} 
+*/	
 
 	include('arrays.php');
 	
@@ -176,7 +180,24 @@ if ($conn->connect_error) {
   <script> new WOW().init(); </script>
   
   <script>
-	
+  
+	var NewSongRequest = new Object();
+		
+<?php
+
+	if(isset($_POST['search']))
+	{
+		$url = $_POST['search'];
+				
+		#INSERT into song_queue
+		echo 'NewSongRequest.url = '.$url.';';
+	}
+	else
+	{
+		
+	}
+
+?>
   </script>  
   
  </body>

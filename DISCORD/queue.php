@@ -148,7 +148,11 @@
 	Sortable.create(simpleList, { 
 			animation: 150
 		});
-		
+	
+	var sortableLinks = $("#category_links_list_3");
+	$(sortableLinks).sortable();
+	var linkOrderData = $(sortableLinks).sortable('serialize');
+	
 	$('#element').sortable({
 		axis: 'y',
 		update: function (event, ui) {
