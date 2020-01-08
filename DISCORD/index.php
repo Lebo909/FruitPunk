@@ -153,7 +153,7 @@ $rmeme1=array_rand($memes1, 3);
 		?>
 
 		<!-- URL Bar and POST -->
-		<form action="index.php" method="POST" role="form">	  
+		<form action="submitted.php" method="POST" role="form">	  
 			<div class="form-group container flex-center pt-3">
 				<div class="md-form search col-lg-8">
 					<input class="form-control text-center" type="text" id="search" name="search" placeholder="Enter YouTube URL to Add Video" aria-label="Search">
