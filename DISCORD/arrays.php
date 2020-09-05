@@ -2,7 +2,7 @@
 //array_rand ( array $memes1 [, int $num = 1 ] )
 
 $memes= [
-	key => "Beyond the Spectrum",
+	key => "Beyond the Color Spectrum",
 	key2 => "Real Time Chess",
 	key3 => "Real Time Cheese",
 	key4 => "Hell is god's cringe compilation",
@@ -38,7 +38,7 @@ $memes= [
 	key34 => "Crystal Alcowed",
 	key35 => "Progressive Bach",
 	key36 => "Sid Meiers Briggs Personality Test",
-	key37 => "Hang all weebs",
+	key37 => "Respect all weebs",
 	key38 => "That's not what your girl said when I talked to her in person",
 	key39 => "Sniper chair",
 	key40 => "Grim Dong",
