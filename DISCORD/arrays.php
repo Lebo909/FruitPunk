@@ -214,7 +214,7 @@ key79 => "Kimbo Sice",
 key80 => "Steve Okeki",
 key81 => "Level 99 Wardrobe",
 key82 => "Disgustron the Flatulent",
-key83 => "Weaboo Retard",
+key83 => "Jimbus Nortronbo",
 key84 => "Top Queer",
 key85 => "Steve 17 Ballmer",
 key86 => "Vin Petrol",
@@ -227,17 +227,11 @@ key92 => "Ooblaf",
 key93 => "Son of Ingdom",
 key94 => "The High Priest of Karbaume",
 key95 => "Ellen Degenerate",
-key96 => "Crash Bandigook",
+key96 => "Crash Bandicooter",
 key97 => "Michael Uzi",
 key98 => "Michael Transaction",
 key99 => "Fuck Gamers and Fuck Gaming",
-key100 => "Bobby Coulon (endangered)",
-key101 => "Shell Siversteinium",
-key102 => "-berg",
-key103 => "Stein Stein",
-key104 => "Hogwart (surname)",
-key105 => "W. E. B. Dem Bois",
-key106 => "DoMinos"
+key100 => "Bobby Coulon (endangered)"
 ];
 
 
